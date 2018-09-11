@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  // req.user にユーザー情報が設定されている
+  res.render('index', { title: 'Express', user: req.user });
 });
 
 module.exports = router;
